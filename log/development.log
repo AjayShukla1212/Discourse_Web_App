@@ -1,0 +1,105 @@
+Started GET "/" for ::1 at 2022-08-24 00:08:42 +0530
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ajay/.rvm/gems/ruby-3.0.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ajay/.rvm/gems/ruby-3.0.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.9ms | Allocations: 751)
+Completed 200 OK in 17ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 7122)
+
+
+Started GET "/" for ::1 at 2022-08-24 00:16:43 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 135)
+  Rendered layout layouts/application.html.erb (Duration: 896.0ms | Allocations: 102007)
+Completed 200 OK in 905ms (Views: 898.5ms | Allocations: 103433)
+
+
+Started GET "/" for ::1 at 2022-08-24 00:18:59 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 140)
+  Rendered main/_navbar.html.erb (Duration: 1.9ms | Allocations: 418)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 2257)
+Completed 200 OK in 25ms (Views: 16.0ms | Allocations: 3581)
+
+
+Started GET "/register" for ::1 at 2022-08-24 00:22:04 +0530
+Processing by RegisterController#new as HTML
+Completed 500 Internal Server Error in 19ms (Allocations: 2493)
+
+
+  
+NameError (uninitialized constant RegisterController::User):
+  
+app/controllers/register_controller.rb:3:in `new'
+Started GET "/" for ::1 at 2022-08-24 00:22:23 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 137)
+  Rendered main/_navbar.html.erb (Duration: 1.0ms | Allocations: 372)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 2180)
+Completed 200 OK in 33ms (Views: 23.6ms | Allocations: 3453)
+
+
+Started GET "/" for ::1 at 2022-08-24 00:22:30 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 15)
+  Rendered main/_navbar.html.erb (Duration: 0.2ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1417)
+Completed 200 OK in 6ms (Views: 4.8ms | Allocations: 2003)
+
+
+Started GET "/" for ::1 at 2022-08-24 00:27:00 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 137)
+  Rendered main/_navbar.html.erb (Duration: 2.0ms | Allocations: 372)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 2174)
+Completed 200 OK in 64ms (Views: 31.9ms | Allocations: 3490)
+
+
+Started GET "/" for ::1 at 2022-08-24 00:27:50 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 137)
+  Rendered main/_navbar.html.erb (Duration: 0.9ms | Allocations: 372)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 2173)
+Completed 200 OK in 29ms (Views: 25.3ms | Allocations: 3487)
+
+
+Started GET "/" for ::1 at 2022-08-24 00:29:06 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 136)
+  Rendered main/_navbar.html.erb (Duration: 2.5ms | Allocations: 372)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 2172)
+Completed 200 OK in 37ms (Views: 19.3ms | Allocations: 3484)
+
+
+Started GET "/" for ::1 at 2022-08-24 00:29:23 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 136)
+  Rendered main/_navbar.html.erb (Duration: 0.8ms | Allocations: 375)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 2175)
+Completed 200 OK in 23ms (Views: 20.6ms | Allocations: 3473)
+
+
+Started GET "/register" for ::1 at 2022-08-24 00:29:27 +0530
+Processing by RegisterController#new as HTML
+Completed 500 Internal Server Error in 18ms (Allocations: 2482)
+
+
+  
+NameError (uninitialized constant RegisterController::User):
+  
+app/controllers/register_controller.rb:3:in `new'
