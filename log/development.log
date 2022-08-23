@@ -19402,3 +19402,844 @@ Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 2665
 
   [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/sign_in" for ::1 at 2022-08-24 01:00:25 +0530
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.0ms | Allocations: 1236)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.3) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.3) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.3) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.3) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.3) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.3) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.3) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3.1) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-08-24 01:00:34 +0530
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 157)
+  Rendered main/_navbar.html.erb (Duration: 0.9ms | Allocations: 403)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 21661)
+Completed 200 OK in 77ms (Views: 44.3ms | ActiveRecord: 1.3ms | Allocations: 34117)
+
+
+Started GET "/" for ::1 at 2022-08-24 01:03:40 +0530
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 155)
+  Rendered main/_navbar.html.erb (Duration: 0.8ms | Allocations: 361)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2122)
+Completed 200 OK in 21ms (Views: 9.6ms | ActiveRecord: 0.4ms | Allocations: 4309)
+
+
+Started GET "/" for ::1 at 2022-08-24 01:04:07 +0530
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 155)
+  Rendered main/_navbar.html.erb (Duration: 1.1ms | Allocations: 361)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 2122)
+Completed 200 OK in 33ms (Views: 18.9ms | ActiveRecord: 0.3ms | Allocations: 4304)
+
+
+Started GET "/register" for ::1 at 2022-08-24 01:04:10 +0530
+Processing by RegisterController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering register/new.html.erb within layouts/application
+  Rendered register/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 3697)
+  Rendered register/_navbar.html.erb (Duration: 0.6ms | Allocations: 294)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 5350)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.1ms | Allocations: 7058)
+
+
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Delete All (3.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Delete All (4.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "giftcards"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "giftcards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "first_name" varchar, "last_name" varchar, "gift_card_value" float, "total_amount" float, "mobile_no" varchar, "address" varchar, "order_date" date, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE INDEX "index_giftcards_on_user_id" ON "giftcards" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "giftcoupons"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "giftcoupons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "first_name" varchar, "last_name" varchar, "gift_card_value" float, "total_amount" float, "mobile_no" varchar, "address" varchar, "order_date" date, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_giftcoupons_on_user_id" ON "giftcoupons" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "gift_card_value" float, "commission_rate" float, "mobile_no" varchar, "address" varchar, "order_date" date, "status" varchar DEFAULT 'Out for Delivery', "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "username" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "role" integer)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "agiftcards" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_agiftcards_on_user_id" ON "agiftcards" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "agiftcards" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "giftcards"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "giftcards"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "giftcards" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f8c9303fd6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_giftcards_on_user_id" ON "giftcards" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "giftcards" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "agiftcards"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "agiftcards"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "agiftcoupons" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_agiftcoupons_on_user_id" ON "agiftcoupons" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "agiftcoupons" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "giftcoupons"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "giftcoupons"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "giftcoupons" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_53c5fee87e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_giftcoupons_on_user_id" ON "giftcoupons" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "giftcoupons" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "agiftcoupons"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "agiftcoupons"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220610051103)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220605122814),
+(20220608102032),
+(20220609141822);
+
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-08-23 19:41:45.672202"], ["updated_at", "2022-08-23 19:41:45.672202"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "8120353c322eb54015c51e89b586ae0008b3629f"], ["created_at", "2022-08-23 19:41:45.676446"], ["updated_at", "2022-08-23 19:41:45.676446"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "giftcards"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "giftcards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "first_name" varchar, "last_name" varchar, "gift_card_value" float, "total_amount" float, "mobile_no" varchar, "address" varchar, "order_date" date, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_giftcards_on_user_id" ON "giftcards" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "giftcoupons"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "giftcoupons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "first_name" varchar, "last_name" varchar, "gift_card_value" float, "total_amount" float, "mobile_no" varchar, "address" varchar, "order_date" date, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_giftcoupons_on_user_id" ON "giftcoupons" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "gift_card_value" float, "commission_rate" float, "mobile_no" varchar, "address" varchar, "order_date" date, "status" varchar DEFAULT 'Out for Delivery', "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "username" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "role" integer)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "agiftcards" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_agiftcards_on_user_id" ON "agiftcards" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "agiftcards" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "giftcards"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "giftcards"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "giftcards" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f8c9303fd6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_giftcards_on_user_id" ON "giftcards" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "giftcards" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "agiftcards"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "agiftcards"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "agiftcoupons" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_agiftcoupons_on_user_id" ON "agiftcoupons" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "agiftcoupons" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "giftcoupons"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "giftcoupons"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "giftcoupons" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_53c5fee87e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_giftcoupons_on_user_id" ON "giftcoupons" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "giftcoupons" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "agiftcoupons"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "agiftcoupons"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220610051103)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220605122814),
+(20220608102032),
+(20220609141822);
+
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-08-23 19:41:45.708414"], ["updated_at", "2022-08-23 19:41:45.708414"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2022-08-23 19:41:45.711073"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "8120353c322eb54015c51e89b586ae0008b3629f"], ["created_at", "2022-08-23 19:41:45.713641"], ["updated_at", "2022-08-23 19:41:45.713641"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@zaggle.in"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "created_at", "updated_at", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "admin@zaggle.in"], ["username", "Admin123"], ["password_digest", "[FILTERED]"], ["created_at", "2022-08-23 19:41:46.132177"], ["updated_at", "2022-08-23 19:41:46.132177"], ["role", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "giftcards"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "giftcards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "first_name" varchar, "last_name" varchar, "gift_card_value" float, "total_amount" float, "mobile_no" varchar, "address" varchar, "order_date" date, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_giftcards_on_user_id" ON "giftcards" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "giftcoupons"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "giftcoupons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "first_name" varchar, "last_name" varchar, "gift_card_value" float, "total_amount" float, "mobile_no" varchar, "address" varchar, "order_date" date, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_giftcoupons_on_user_id" ON "giftcoupons" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "gift_card_value" float, "commission_rate" float, "mobile_no" varchar, "address" varchar, "order_date" date, "status" varchar DEFAULT 'Out for Delivery', "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "username" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "role" integer)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "agiftcards" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_agiftcards_on_user_id" ON "agiftcards" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "agiftcards" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "giftcards"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "giftcards"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "giftcards" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f8c9303fd6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_giftcards_on_user_id" ON "giftcards" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "giftcards" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "agiftcards"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "agiftcards"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "agiftcoupons" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_agiftcoupons_on_user_id" ON "agiftcoupons" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "agiftcoupons" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "giftcoupons"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "giftcoupons"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "giftcoupons" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_53c5fee87e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_giftcoupons_on_user_id" ON "giftcoupons" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "giftcoupons" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "agiftcoupons"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "agiftcoupons"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220610051103)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220605122814),
+(20220608102032),
+(20220609141822);
+
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-08-23 19:43:08.095365"], ["updated_at", "2022-08-23 19:43:08.095365"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "8120353c322eb54015c51e89b586ae0008b3629f"], ["created_at", "2022-08-23 19:43:08.101497"], ["updated_at", "2022-08-23 19:43:08.101497"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "giftcards"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "giftcards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "first_name" varchar, "last_name" varchar, "gift_card_value" float, "total_amount" float, "mobile_no" varchar, "address" varchar, "order_date" date, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_giftcards_on_user_id" ON "giftcards" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "giftcoupons"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "giftcoupons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "first_name" varchar, "last_name" varchar, "gift_card_value" float, "total_amount" float, "mobile_no" varchar, "address" varchar, "order_date" date, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_giftcoupons_on_user_id" ON "giftcoupons" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "gift_card_value" float, "commission_rate" float, "mobile_no" varchar, "address" varchar, "order_date" date, "status" varchar DEFAULT 'Out for Delivery', "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "username" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "role" integer)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "agiftcards" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_agiftcards_on_user_id" ON "agiftcards" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "agiftcards" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "giftcards"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "giftcards"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "giftcards" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f8c9303fd6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_giftcards_on_user_id" ON "giftcards" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "giftcards" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "agiftcards"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "agiftcards"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "agiftcoupons" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_agiftcoupons_on_user_id" ON "agiftcoupons" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "agiftcoupons" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "giftcoupons"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "giftcoupons"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "giftcoupons" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "gift_card_value" float DEFAULT NULL, "total_amount" float DEFAULT NULL, "mobile_no" varchar DEFAULT NULL, "address" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_53c5fee87e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_giftcoupons_on_user_id" ON "giftcoupons" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "giftcoupons" ("id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at")
+                     SELECT "id","user_id","first_name","last_name","gift_card_value","total_amount","mobile_no","address","order_date","status","created_at","updated_at" FROM "agiftcoupons"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "agiftcoupons"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220610051103)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220605122814),
+(20220608102032),
+(20220609141822);
+
+[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-08-23 19:43:08.134982"], ["updated_at", "2022-08-23 19:43:08.134982"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2022-08-23 19:43:08.137841"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "8120353c322eb54015c51e89b586ae0008b3629f"], ["created_at", "2022-08-23 19:43:08.140822"], ["updated_at", "2022-08-23 19:43:08.140822"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin.user@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "created_at", "updated_at", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "admin.user@email.com"], ["username", "Admin123"], ["password_digest", "[FILTERED]"], ["created_at", "2022-08-23 19:43:08.558865"], ["updated_at", "2022-08-23 19:43:08.558865"], ["role", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2022-08-24 01:15:04 +0530
+Processing by MainController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/main_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+  Rendered main/_navbar.html.erb (Duration: 0.3ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 1516)
+Completed 200 OK in 62ms (Views: 13.6ms | ActiveRecord: 2.3ms | Allocations: 6498)
+
+
+Started GET "/register" for ::1 at 2022-08-24 01:15:06 +0530
+Processing by RegisterController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering register/new.html.erb within layouts/application
+  Rendered register/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1425)
+  Rendered register/_navbar.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2789)
+Completed 200 OK in 15ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 5569)
+
+
+Started POST "/register" for ::1 at 2022-08-24 01:15:39 +0530
+Processing by RegisterController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Ajay.Shukla", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"Ajay.Shukla@gmail.com"}, "commit"=>"Register"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/register_controller.rb:10:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Ajay.Shukla@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/register_controller.rb:10:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "created_at", "updated_at", "role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "Ajay.Shukla@gmail.com"], ["username", "Ajay.Shukla"], ["password_digest", "[FILTERED]"], ["created_at", "2022-08-23 19:45:40.399268"], ["updated_at", "2022-08-23 19:45:40.399268"], ["role", 0]]
+  ↳ app/controllers/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/register_controller.rb:10:in `create'
+Redirected to http://localhost:3000/giftcard
+Completed 302 Found in 474ms (ActiveRecord: 2.2ms | Allocations: 5437)
+
+
+Started GET "/giftcard" for ::1 at 2022-08-24 01:15:40 +0530
+Processing by GiftcardController#order as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/giftcard_controller.rb:21:in `order'
+  Rendering layout layouts/application.html.erb
+  Rendering giftcard/order.html.erb within layouts/application
+  [1m[36mGiftcoupon Load (0.1ms)[0m  [1m[34mSELECT "giftcoupons".* FROM "giftcoupons"[0m
+  ↳ app/views/giftcard/order.html.erb:15
+  Rendered giftcard/order.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1050)
+  Rendered giftcard/_navbar.html.erb (Duration: 1.0ms | Allocations: 842)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3278)
+Completed 200 OK in 64ms (Views: 23.4ms | ActiveRecord: 0.2ms | Allocations: 6501)
+
+
+Started GET "/neworder" for ::1 at 2022-08-24 01:15:50 +0530
+Processing by GiftcardController#neworder as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering giftcard/neworder.html.erb within layouts/application
+  Rendered giftcard/neworder.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1564)
+  Rendered giftcard/_navbar.html.erb (Duration: 1.9ms | Allocations: 371)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 3154)
+Completed 200 OK in 43ms (Views: 18.1ms | ActiveRecord: 1.6ms | Allocations: 9723)
+
+
+Started GET "/giftcard" for ::1 at 2022-08-24 01:15:51 +0530
+Processing by GiftcardController#order as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/giftcard_controller.rb:21:in `order'
+  Rendering layout layouts/application.html.erb
+  Rendering giftcard/order.html.erb within layouts/application
+  [1m[36mGiftcoupon Load (0.2ms)[0m  [1m[34mSELECT "giftcoupons".* FROM "giftcoupons"[0m
+  ↳ app/views/giftcard/order.html.erb:15
+  Rendered giftcard/order.html.erb within layouts/application (Duration: 2.6ms | Allocations: 586)
+  Rendered giftcard/_navbar.html.erb (Duration: 0.6ms | Allocations: 363)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2037)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 3653)
+
+
+Started GET "/neworder" for ::1 at 2022-08-24 01:15:52 +0530
+Processing by GiftcardController#neworder as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering giftcard/neworder.html.erb within layouts/application
+  Rendered giftcard/neworder.html.erb within layouts/application (Duration: 2.6ms | Allocations: 791)
+  Rendered giftcard/_navbar.html.erb (Duration: 0.7ms | Allocations: 356)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2233)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 3294)
+
+
+Started DELETE "/logout" for ::1 at 2022-08-24 01:16:00 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1231)
+
+
+Started GET "/" for ::1 at 2022-08-24 01:16:00 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+  Rendered main/_navbar.html.erb (Duration: 0.2ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1365)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1950)
+
+
+Started GET "/sign_in" for ::1 at 2022-08-24 01:16:02 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2748)
+  Rendered sessions/_navbar.html.erb (Duration: 1.2ms | Allocations: 261)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4339)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 5324)
+
+
+Started POST "/sign_in" for ::1 at 2022-08-24 01:16:29 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"Admin123", "password"=>"[FILTERED]", "commit"=>"Login"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: SessionsController, action: create, request: #<ActionDispatch::Request:0x0000000118bae500>, params: {"authenticity_token"=>"[FILTERED]", "username"=>"Admin123", "password"=>"[FILTERED]", "commit"=>"Login", "controller"=>"sessions", "action"=>"create"} }[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Admin123"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:10:in `create'
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: SessionsController, action: create, request: #<ActionDispatch::Request:0x0000000118bae500>, params: {"authenticity_token"=>"[FILTERED]", "username"=>"Admin123", "password"=>"[FILTERED]", "commit"=>"Login", "controller"=>"sessions", "action"=>"create"} }[0m
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: SessionsController, action: create, request: #<ActionDispatch::Request:0x0000000118bae500>, params: {"authenticity_token"=>"[FILTERED]", "username"=>"Admin123", "password"=>"[FILTERED]", "commit"=>"Login", "controller"=>"sessions", "action"=>"create"} }[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 801ms (ActiveRecord: 0.7ms | Allocations: 1679)
+
+
+Started GET "/admin" for ::1 at 2022-08-24 01:16:30 +0530
+Processing by AdminpageController#showalltable as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering adminpage/showalltable.html.erb within layouts/application
+  [1m[36mGiftcoupon Load (0.1ms)[0m  [1m[34mSELECT "giftcoupons".* FROM "giftcoupons"[0m
+  ↳ app/views/adminpage/showalltable.html.erb:16
+  Rendered adminpage/showalltable.html.erb within layouts/application (Duration: 1.7ms | Allocations: 936)
+  Rendered adminpage/_navbar.html.erb (Duration: 1.3ms | Allocations: 797)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3110)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 4705)
+
+
+Started GET "/admin" for ::1 at 2022-08-24 01:16:34 +0530
+Processing by AdminpageController#showalltable as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering adminpage/showalltable.html.erb within layouts/application
+  [1m[36mGiftcoupon Load (0.3ms)[0m  [1m[34mSELECT "giftcoupons".* FROM "giftcoupons"[0m
+  ↳ app/views/adminpage/showalltable.html.erb:16
+  Rendered adminpage/showalltable.html.erb within layouts/application (Duration: 2.8ms | Allocations: 554)
+  Rendered adminpage/_navbar.html.erb (Duration: 0.7ms | Allocations: 363)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2004)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.5ms | Allocations: 3139)
+
+
+Started GET "/admin" for ::1 at 2022-08-24 01:16:35 +0530
+Processing by AdminpageController#showalltable as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering adminpage/showalltable.html.erb within layouts/application
+  [1m[36mGiftcoupon Load (0.1ms)[0m  [1m[34mSELECT "giftcoupons".* FROM "giftcoupons"[0m
+  ↳ app/views/adminpage/showalltable.html.erb:16
+  Rendered adminpage/showalltable.html.erb within layouts/application (Duration: 1.6ms | Allocations: 553)
+  Rendered adminpage/_navbar.html.erb (Duration: 0.8ms | Allocations: 363)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2003)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.4ms | Allocations: 3014)
+
+
+Started GET "/admin" for ::1 at 2022-08-24 01:16:36 +0530
+Processing by AdminpageController#showalltable as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering adminpage/showalltable.html.erb within layouts/application
+  [1m[36mGiftcoupon Load (0.1ms)[0m  [1m[34mSELECT "giftcoupons".* FROM "giftcoupons"[0m
+  ↳ app/views/adminpage/showalltable.html.erb:16
+  Rendered adminpage/showalltable.html.erb within layouts/application (Duration: 1.3ms | Allocations: 553)
+  Rendered adminpage/_navbar.html.erb (Duration: 0.8ms | Allocations: 363)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2003)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.7ms | Allocations: 3030)
+
+
+Started DELETE "/logout" for ::1 at 2022-08-24 01:18:09 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.4ms | Allocations: 1007)
+
+
+Started GET "/" for ::1 at 2022-08-24 01:18:09 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered main/_navbar.html.erb (Duration: 0.2ms | Allocations: 137)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1243)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1788)
+
+
+Started GET "/" for ::1 at 2022-08-24 01:18:12 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered main/_navbar.html.erb (Duration: 0.3ms | Allocations: 137)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1242)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1798)
+
+
+Started GET "/" for ::1 at 2022-08-24 01:21:10 +0530
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 154)
+  Rendered main/_navbar.html.erb (Duration: 1.7ms | Allocations: 363)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 2122)
+Completed 200 OK in 38ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 3221)
+
+
+Started GET "/register" for ::1 at 2022-08-24 01:21:14 +0530
+Processing by RegisterController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering register/new.html.erb within layouts/application
+  Rendered register/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1859)
+  Rendered register/_navbar.html.erb (Duration: 0.9ms | Allocations: 261)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 3453)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 4425)
+
+
+Started GET "/sign_in" for ::1 at 2022-08-24 01:21:15 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2721)
+  Rendered sessions/_navbar.html.erb (Duration: 0.7ms | Allocations: 262)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4309)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 5250)
+
+
+Started POST "/sign_in" for ::1 at 2022-08-24 01:21:18 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: SessionsController, action: create, request: #<ActionDispatch::Request:0x000000010c425740>, params: {"authenticity_token"=>"[FILTERED]", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Login", "controller"=>"sessions", "action"=>"create"} }[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:10:in `create'
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1227)
+
+
+Started GET "/sign_in" for ::1 at 2022-08-24 01:21:18 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2272)
+  Rendered sessions/_navbar.html.erb (Duration: 0.1ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3465)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 4046)
+
+
+Started GET "/register" for ::1 at 2022-08-24 01:22:32 +0530
+Processing by RegisterController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering register/new.html.erb within layouts/application
+  Rendered register/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1229)
+  Rendered register/_navbar.html.erb (Duration: 0.2ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 2406)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 2973)
+
+
+Started GET "/sign_in" for ::1 at 2022-08-24 01:22:33 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2272)
+  Rendered sessions/_navbar.html.erb (Duration: 0.3ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3448)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 3993)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/sign_in" for ::1 at 2022-08-24 01:22:58 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"Ajay.Shukla", "password"=>"[FILTERED]", "commit"=>"Login"}
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: SessionsController, action: create, request: #<ActionDispatch::Request:0x0000000118806600>, params: {"authenticity_token"=>"[FILTERED]", "username"=>"Ajay.Shukla", "password"=>"[FILTERED]", "commit"=>"Login", "controller"=>"sessions", "action"=>"create"} }[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Ajay.Shukla"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:10:in `create'
+[31mUnpermitted parameters: :authenticity_token, :commit. Context: { controller: SessionsController, action: create, request: #<ActionDispatch::Request:0x0000000118806600>, params: {"authenticity_token"=>"[FILTERED]", "username"=>"Ajay.Shukla", "password"=>"[FILTERED]", "commit"=>"Login", "controller"=>"sessions", "action"=>"create"} }[0m
+Redirected to http://localhost:3000/giftcard
+Completed 302 Found in 408ms (ActiveRecord: 1.5ms | Allocations: 1252)
+
+
+Started GET "/giftcard" for ::1 at 2022-08-24 01:22:59 +0530
+Processing by GiftcardController#order as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/giftcard_controller.rb:21:in `order'
+  Rendering layout layouts/application.html.erb
+  Rendering giftcard/order.html.erb within layouts/application
+  [1m[36mGiftcoupon Load (0.1ms)[0m  [1m[34mSELECT "giftcoupons".* FROM "giftcoupons"[0m
+  ↳ app/views/giftcard/order.html.erb:15
+  Rendered giftcard/order.html.erb within layouts/application (Duration: 3.4ms | Allocations: 940)
+  Rendered giftcard/_navbar.html.erb (Duration: 1.5ms | Allocations: 804)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3106)
+Completed 200 OK in 20ms (Views: 11.7ms | ActiveRecord: 0.2ms | Allocations: 4950)
+
+
+Started GET "/giftcard" for ::1 at 2022-08-24 01:23:54 +0530
+Processing by GiftcardController#order as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/giftcard_controller.rb:21:in `order'
+  Rendering layout layouts/application.html.erb
+  Rendering giftcard/order.html.erb within layouts/application
+  [1m[36mGiftcoupon Load (0.1ms)[0m  [1m[34mSELECT "giftcoupons".* FROM "giftcoupons"[0m
+  ↳ app/views/giftcard/order.html.erb:15
+  Rendered giftcard/order.html.erb within layouts/application (Duration: 2.0ms | Allocations: 557)
+  Rendered giftcard/_navbar.html.erb (Duration: 0.9ms | Allocations: 363)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2007)
+Completed 200 OK in 14ms (Views: 6.6ms | ActiveRecord: 0.4ms | Allocations: 3608)
+
+
+Started GET "/giftcard" for ::1 at 2022-08-24 01:24:10 +0530
+Processing by GiftcardController#order as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/giftcard_controller.rb:21:in `order'
+  Rendering layout layouts/application.html.erb
+  Rendering giftcard/order.html.erb within layouts/application
+  [1m[36mGiftcoupon Load (0.1ms)[0m  [1m[34mSELECT "giftcoupons".* FROM "giftcoupons"[0m
+  ↳ app/views/giftcard/order.html.erb:15
+  Rendered giftcard/order.html.erb within layouts/application (Duration: 4.7ms | Allocations: 944)
+  Rendered giftcard/_navbar.html.erb (Duration: 2.0ms | Allocations: 804)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3345)
+Completed 200 OK in 22ms (Views: 15.3ms | ActiveRecord: 0.4ms | Allocations: 5374)
+
+
+  [1m[36mGiftcoupon Load (1.7ms)[0m  [1m[34mSELECT "giftcoupons".* FROM "giftcoupons"[0m
+  [1m[36mGiftcard Load (0.2ms)[0m  [1m[34mSELECT "giftcards".* FROM "giftcards"[0m
+  [1m[36mGiftcard Load (0.2ms)[0m  [1m[34mSELECT "giftcards".* FROM "giftcards" ORDER BY "giftcards"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]

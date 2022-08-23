@@ -6,6 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# rails db:seed 
+# rails db:seed
 
-admin  = User.create({email:"admin@zaggle.in", username: "Admin123", password: "Admin@123", role: 1})
+admin  = User.create({email:"admin.user@email.com", username: "Admin123", password: "Admin@123", role: 1})
